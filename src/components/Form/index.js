@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import ResultImc from "./ResultImc";
+import styles from "./style";
 
 export default function Form() {
     const [height, setHeight] = useState(null)
@@ -29,28 +30,32 @@ export default function Form() {
     }
 
     return(
-        <View>
-            <View>
-                <Text>Altura</Text>
+        <View style={styles.formContext}>
+            <View style={styles.form}>
+                <Text style={styles.formLabel}>Altura</Text>
                 <TextInput
-                placeholder="Ex: 1.75"
-                keyboardType="numeric"
-                value={height}
-                onChangeText={setHeight}
+                    placeholder="Ex: 1.75"
+                    keyboardType="numeric"
+                    value={height}
+                    onChangeText={setHeight}
+                    style={styles.input}
                 />
                 
-                <Text>Peso</Text>
+                <Text style={styles.formLabel}>Peso</Text>
                 <TextInput
-                placeholder="Ex: 75.365"
-                keyboardType="numeric"
-                value={weight}
-                onChangeText={setWeight}
+                    placeholder="Ex: 75.365"
+                    keyboardType="numeric"
+                    value={weight}
+                    onChangeText={setWeight}
+                    style={styles.input}
                 />
 
-                <Button 
-                    title="Calcular IMC" 
-                    onPress={() => validationImc()}
-                />
+                <TouchableOpacity
+                    onPress={() => {validationImc()}}
+                    style={styles.buttonCalculator}
+                >
+                    <Text style={styles.textButtonCalculator}>Calcular IMC</Text>
+                </TouchableOpacity>
             </View>
 
             <ResultImc messageResultImc={messageImc} resultImc={imc} />
