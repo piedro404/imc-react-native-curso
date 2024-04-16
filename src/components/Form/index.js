@@ -54,7 +54,7 @@ export default function Form() {
                     onPress={() => {validationImc()}}
                     style={styles.buttonCalculator}
                 >
-                    <Text style={styles.textButtonCalculator}>Calcular IMC</Text>
+                    <Text style={styles.textButtonCalculator}>{ textButton }</Text>
                 </TouchableOpacity>
             </View>
 
