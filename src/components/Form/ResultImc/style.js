@@ -1,21 +1,21 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-    resultImc: {
+    contextImc: {
         flex: 1,
         marginTop: 15,
-        paddingTop: 60,
+        paddingTop: 15,
         borderRadius: 50,
         alignItems: "center",
         width: "100%",
     },
-    info: {
-        fontSize: 18,
+    resultImc: {
+        fontSize: 48,
         color: "#ff0043",
         fontWeight: "bold",
     },
-    numberImc: {
-        fontSize: 48,
+    titleResultImc: {
+        fontSize: 18,
         color: "#ff0043",
         fontWeight: "bold",
     },
